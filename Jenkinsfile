@@ -18,14 +18,14 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                sh 'mvn clean verify'
+                bat 'mvn clean verify'
             }
         }
 
         stage('MVN SONARQUBE') {
             steps {
                 withSonarQubeEnv(SONARQUBE_ENV) {
-                    sh 'mvn sonar:sonar'
+                    bat 'mvn sonar:sonar'
                 }
             }
         }
