@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Onsko/TPCafe_Ons_kochtane.git'
+                git branch: 'main', url: 'https://github.com/Onsko/TPCafe_Ons_kochtane.git'
             }
         }
 
